@@ -1,0 +1,1202 @@
+<title>Partnerschaft Naturstein-Gutachten</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap">
+<style>
+:root {
+  --bg: #fafaf7;
+  --fg: #1a1a17;
+  --fg-muted: #6b6b60;
+  --fg-light: #9a9a90;
+  --surface: #ffffff;
+  --surface-alt: #f2f1ec;
+  --border: #e2e1d9;
+  --accent: #2d5a27;
+  --accent-light: #e8f0e5;
+  --accent-mid: #3a7a32;
+  --gold: #9a7b1a;
+  --gold-light: #faf5e4;
+  --gold-dark: #7a6114;
+  --stone: #8b7d6b;
+  --stone-light: #f5f0e8;
+  --font-display: 'Instrument Serif', Georgia, serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+  --r: 14px;
+  --rs: 8px;
+  --max-w: 720px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f0f0e;
+    --fg: #eae9e3;
+    --fg-muted: #8a8a7e;
+    --fg-light: #5a5a52;
+    --surface: #1a1a17;
+    --surface-alt: #232320;
+    --border: #333330;
+    --accent: #5cb850;
+    --accent-light: #1a2e17;
+    --accent-mid: #6cd060;
+    --gold: #d4a820;
+    --gold-light: #2a2410;
+    --gold-dark: #e8c040;
+    --stone: #a09080;
+    --stone-light: #222018;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0f0f0e;
+  --fg: #eae9e3;
+  --fg-muted: #8a8a7e;
+  --fg-light: #5a5a52;
+  --surface: #1a1a17;
+  --surface-alt: #232320;
+  --border: #333330;
+  --accent: #5cb850;
+  --accent-light: #1a2e17;
+  --accent-mid: #6cd060;
+  --gold: #d4a820;
+  --gold-light: #2a2410;
+  --gold-dark: #e8c040;
+  --stone: #a09080;
+  --stone-light: #222018;
+  color-scheme: dark;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; }
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.7;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--max-w); margin: 0 auto; }
+
+/* ── Hero ── */
+.hero {
+  padding: 4rem 0 3rem;
+  text-align: center;
+}
+.hero-tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--accent-light);
+  padding: 0.35em 1em;
+  border-radius: 100px;
+  margin-bottom: 1.5rem;
+}
+.hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 6vw, 3.4rem);
+  font-weight: 400;
+  line-height: 1.12;
+  text-wrap: balance;
+  margin-bottom: 1.25rem;
+}
+.hero h1 em { font-style: italic; color: var(--accent); }
+.hero-lead {
+  font-size: 1.1rem;
+  color: var(--fg-muted);
+  max-width: 540px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ── Sections ── */
+section { padding: 2.5rem 0; }
+.section-rule {
+  width: 40px;
+  height: 2px;
+  background: var(--border);
+  margin-bottom: 2rem;
+}
+h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 4vw, 2rem);
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+h2 em { font-style: italic; color: var(--accent); }
+h3 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+p + p { margin-top: 1rem; }
+.muted { color: var(--fg-muted); }
+.text-accent { color: var(--accent); }
+strong { font-weight: 600; }
+
+/* ── Callout ── */
+.callout {
+  background: var(--stone-light);
+  border-left: 3px solid var(--stone);
+  border-radius: 0 var(--rs) var(--rs) 0;
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ── KPI Row ── */
+.kpi-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 2rem 0;
+}
+.kpi-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 1.25rem;
+  text-align: center;
+}
+.kpi-num {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  line-height: 1.1;
+  margin-bottom: 0.25rem;
+}
+.kpi-num.green { color: var(--accent); }
+.kpi-num.gold { color: var(--gold); }
+.kpi-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+
+/* ── Revenue Table ── */
+.rev-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.92rem;
+}
+.rev-table th, .rev-table td {
+  text-align: left;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border);
+}
+.rev-table th {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  background: var(--surface-alt);
+}
+.rev-table tr:last-child td { border-bottom: none; }
+.rev-table td:last-child { font-weight: 600; color: var(--accent); }
+
+/* ── Comparison Table ── */
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.9rem;
+}
+.compare-table th, .compare-table td {
+  text-align: left;
+  padding: 0.7rem 1rem;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+.compare-table th {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  background: var(--surface-alt);
+}
+.compare-table td:first-child { color: var(--fg-muted); }
+.compare-table td:last-child { color: var(--accent); font-weight: 500; }
+.compare-table tr:last-child td { border-bottom: none; }
+
+/* ── Interactive Growth Model ── */
+.growth-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 2rem;
+  margin: 2rem 0;
+}
+.growth-box h3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.growth-box h3 .hint {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--fg-light);
+}
+.team-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 1.25rem 0;
+  justify-content: center;
+}
+.ti {
+  width: 42px; height: 52px;
+  border-radius: var(--rs);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  gap: 0.1rem;
+  transition: all 0.25s ease;
+}
+.ti span { font-size: 0.5rem; font-weight: 600; }
+.ti.sv { background: var(--accent-light); border: 2px solid var(--accent); color: var(--accent); }
+.ti.as { background: var(--gold-light); border: 2px solid var(--gold); color: var(--gold); }
+.ti.ghost { background: transparent; border: 2px dashed var(--border); color: var(--fg-light); opacity: 0.35; }
+
+.slider-group { margin: 1rem 0 1.5rem; }
+.sl-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+.sl-name {
+  font-size: 0.82rem;
+  font-weight: 500;
+  min-width: 110px;
+  flex-shrink: 0;
+}
+.sl-track { flex: 1; min-width: 0; }
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 5px;
+  border-radius: 3px;
+  background: var(--border);
+  outline: none;
+  cursor: pointer;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px; height: 20px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 3px solid var(--surface);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.18);
+  cursor: grab;
+}
+input[type="range"]::-moz-range-thumb {
+  width: 20px; height: 20px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 3px solid var(--surface);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.18);
+  cursor: grab;
+}
+.sl-val {
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  font-size: 1rem;
+  min-width: 2ch;
+  text-align: right;
+}
+
+.g-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+.g-kpi {
+  background: var(--surface-alt);
+  border-radius: var(--rs);
+  padding: 1rem;
+  text-align: center;
+}
+.g-kpi-label {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  margin-bottom: 0.3rem;
+}
+.g-kpi-val {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.2;
+}
+.g-kpi-val.green { color: var(--accent); }
+.g-kpi-val.gold { color: var(--gold); }
+.g-kpi-sub {
+  font-size: 0.68rem;
+  color: var(--fg-light);
+  margin-top: 0.15rem;
+}
+
+/* ── Bars ── */
+.bars { display: flex; flex-direction: column; gap: 0.5rem; }
+.bar-row { display: flex; align-items: center; gap: 0.6rem; }
+.bar-lbl {
+  font-size: 0.75rem;
+  font-weight: 500;
+  min-width: 60px;
+  text-align: right;
+  flex-shrink: 0;
+  line-height: 1.2;
+}
+.bar-track-o {
+  flex: 1;
+  min-width: 0;
+  height: 24px;
+  background: var(--surface-alt);
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+.bar-fill-o {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  display: flex;
+  align-items: center;
+  padding-left: 0.5rem;
+}
+.bar-fill-o.bf-g { background: var(--accent); }
+.bar-fill-o.bf-f { background: var(--gold); }
+.bar-amt {
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: #fff;
+  white-space: nowrap;
+}
+.bar-legend-o {
+  display: flex;
+  gap: 1.25rem;
+  margin-top: 0.6rem;
+  font-size: 0.7rem;
+  color: var(--fg-muted);
+}
+.ldot {
+  display: inline-block;
+  width: 9px; height: 9px;
+  border-radius: 2px;
+  margin-right: 0.35rem;
+  vertical-align: middle;
+}
+.ldot.lg { background: var(--accent); }
+.ldot.lf { background: var(--gold); }
+
+/* ── Flywheel ── */
+.fw { display: flex; flex-direction: column; }
+.fw-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding-bottom: 1.25rem;
+}
+.fw-step:last-child { padding-bottom: 0; }
+.fw-ind { display: flex; flex-direction: column; align-items: center; flex-shrink: 0; width: 38px; }
+.fw-dot {
+  width: 38px; height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+.fw-line { width: 2px; flex: 1; min-height: 16px; background: var(--border); }
+.fw-step:last-child .fw-line { display: none; }
+.fw-body { padding-top: 0.4rem; min-width: 0; }
+.fw-title { font-weight: 600; font-size: 0.92rem; margin-bottom: 0.15rem; }
+.fw-desc { font-size: 0.83rem; color: var(--fg-muted); line-height: 1.5; }
+.fw-dot.dg { background: var(--accent-light); color: var(--accent); }
+.fw-dot.dy { background: var(--gold-light); color: var(--gold); }
+
+/* ── Multiplier banner ── */
+.multi-banner {
+  background: var(--accent-light);
+  border: 1px solid var(--accent);
+  border-radius: var(--r);
+  padding: 1.5rem;
+  text-align: center;
+  margin: 2rem 0;
+}
+.multi-num {
+  font-family: var(--font-display);
+  font-size: 2.8rem;
+  color: var(--accent);
+  line-height: 1;
+}
+.multi-sub {
+  font-size: 0.82rem;
+  color: var(--fg-muted);
+  margin-top: 0.2rem;
+}
+
+/* ── Roadmap ── */
+.rm-phase {
+  border-left: 2px solid var(--border);
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+.rm-phase::before {
+  content: '';
+  position: absolute;
+  left: -6px;
+  top: 0.3rem;
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+.rm-phase h4 {
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 0.4rem;
+}
+.rm-phase ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.rm-phase li {
+  font-size: 0.88rem;
+  color: var(--fg-muted);
+  padding: 0.2rem 0;
+  padding-left: 1.2rem;
+  position: relative;
+}
+.rm-phase li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--fg-light);
+}
+.rm-target {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin-top: 0.3rem;
+}
+
+/* ── GmbH Table ── */
+.gmbh-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.88rem;
+}
+.gmbh-table th, .gmbh-table td {
+  text-align: left;
+  padding: 0.65rem 0.8rem;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+.gmbh-table th {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  background: var(--surface-alt);
+}
+.gmbh-table tr:last-child td { border-bottom: none; }
+
+/* ── CTA ── */
+.cta-section {
+  text-align: center;
+  padding: 3rem 0 4rem;
+}
+.cta-section h2 { margin-bottom: 0.75rem; }
+.cta-quote {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-style: italic;
+  color: var(--fg-muted);
+  max-width: 500px;
+  margin: 1.5rem auto 0;
+  line-height: 1.5;
+}
+.cta-quote strong { color: var(--fg); font-style: normal; }
+
+/* ── Innovation bullets ── */
+.inn-item {
+  margin-bottom: 1.5rem;
+}
+.inn-item strong {
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+/* ── Responsive ── */
+@media (max-width: 520px) {
+  .hero { padding: 3rem 0 2rem; }
+  .kpi-row { grid-template-columns: 1fr; gap: 0.75rem; }
+  .growth-box { padding: 1.25rem; }
+  .sl-name { min-width: 90px; }
+  .g-kpi-grid { grid-template-columns: 1fr 1fr; }
+  .bar-lbl { min-width: 48px; font-size: 0.68rem; }
+  .rev-table, .compare-table, .gmbh-table { font-size: 0.8rem; }
+  .rev-table th, .rev-table td,
+  .compare-table th, .compare-table td,
+  .gmbh-table th, .gmbh-table td { padding: 0.5rem 0.6rem; }
+  .vision-compare { grid-template-columns: 1fr !important; }
+  .svg-desktop { display: none !important; }
+  .svg-mobile { display: block !important; }
+}
+@media (min-width: 521px) {
+  .svg-mobile { display: none !important; }
+}
+</style>
+
+<div class="wrap">
+
+  <!-- ═══ HERO ═══ -->
+  <div class="hero">
+    <div class="hero-tag">Vorschlag zur Partnerschaft</div>
+    <h1>Dein Fachwissen.<br>Meine <em>Skalierung.</em></h1>
+    <p class="hero-lead">Vier Generationen Naturstein-Erfahrung. Modernste Technologie. Ein gemeinsames Ziel: das führende Gutachter-Unternehmen in Baden-Württemberg aufbauen.</p>
+  </div>
+
+  <!-- ═══ AUSGANGSLAGE ═══ -->
+  <section>
+    <div class="section-rule"></div>
+    <h2>Die <em>Ausgangslage</em></h2>
+    <p>Tobi, du bist einer von drei zertifizierten Naturstein-Sachverständigen im Großraum Stuttgart. Dein letzter Auftrag: 2–3 Tage Arbeit, 16.000 € Umsatz. Der Markt gibt das locker her — allein in Stuttgart stehen tausende Natursteinfassaden, die regelmäßig geprüft werden müssen (VDI 6200, Verkehrssicherungspflicht).</p>
+    <p>Das Problem: Du bist allein. Du machst die Akquise, die Doku, die Bewertung, das Gutachten, die Abrechnung. Jede Stunde, die du mit Verwaltung verbringst, ist eine Stunde, die du nicht fakturierst. Und Aufträge, die du nicht annehmen kannst, gehen an die Konkurrenz — von denen es nur drei gibt. Und die drei? Die machen nichts. Kein Marketing, keine digitale Präsenz, keine Skalierung. Die warten, dass das Telefon klingelt.</p>
+
+    <div class="kpi-row">
+      <div class="kpi-card">
+        <div class="kpi-num green">16.000 €</div>
+        <div class="kpi-label">pro Gutachten</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-num">3</div>
+        <div class="kpi-label">Wettbewerber</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-num gold">∞</div>
+        <div class="kpi-label">Nachfrage (gesetzl.)</div>
+      </div>
+    </div>
+
+    <p><strong>Mein Vorschlag: Wir ändern das.</strong></p>
+  </section>
+
+  <!-- ═══ VISION ═══ -->
+  <section>
+    <div class="section-rule"></div>
+    <h2>Die <em>Vision</em></h2>
+    <p>Heute bist du ein Einzelunternehmer. Sehr gut in dem, was du tust — aber allein. Das heißt: Dein Umsatz ist an deine persönliche Zeit gebunden. Wenn du krank bist, im Urlaub bist oder einfach keine Kapazität hast, steht alles still. Dein Wissen steckt in deinem Kopf, nicht in einem System. Und wenn du irgendwann aufhören willst, ist nichts da, was weiterläuft.</p>
+    <p><strong>Das ändern wir.</strong> Wir bauen aus deinem Einzelunternehmen eine professionelle GmbH mit einem Team, das um dich herum arbeitet. Assistenten, die die Laufarbeit machen. Eine Plattform, die Kunden findet. Und Technologie, die dein Fachwissen multipliziert — sodass andere unter deiner Anleitung arbeiten können, ohne dass du jede Minute selbst vor Ort stehst.</p>
+
+    <!-- VORHER / NACHHER VISUAL -->
+    <div class="vision-compare" style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:2rem 0">
+      <div style="background:var(--surface-alt);border:1.5px solid var(--border);border-radius:var(--r);padding:1.25rem;text-align:center">
+        <div style="font-size:2rem;margin-bottom:.5rem">👤</div>
+        <div style="font-family:var(--font-display);font-size:1.15rem;color:var(--fg);margin-bottom:.75rem">Heute</div>
+        <div style="font-family:var(--font-body);font-size:.85rem;color:var(--fg-muted);line-height:1.6">
+          1 Gutachter<br>
+          2–3 Tage pro Gutachten<br>
+          5 Gutachten / Monat<br>
+          Umsatz = deine Zeit<br>
+          <strong style="color:var(--stone)">80K € / Monat max.</strong>
+        </div>
+      </div>
+      <div style="background:var(--accent-light);border:2px solid var(--accent);border-radius:var(--r);padding:1.25rem;text-align:center">
+        <div style="font-size:2rem;margin-bottom:.5rem">👤👷👷🧠</div>
+        <div style="font-family:var(--font-display);font-size:1.15rem;color:var(--accent);margin-bottom:.75rem">Mit System</div>
+        <div style="font-family:var(--font-body);font-size:.85rem;color:var(--fg-muted);line-height:1.6">
+          1 Gutachter + Assistenten + KI<br>
+          2–4 h Review pro Gutachten<br>
+          bis 15 Gutachten / Monat<br>
+          Team arbeitet, du bewertest<br>
+          <strong style="color:var(--accent)">240K € / Monat möglich</strong>
+        </div>
+      </div>
+    </div>
+
+    <p>Zur Einordnung: Dein letzter Auftrag waren 16.000 € in 2–3 Tagen. Wenn ein Assistent die Dokumentation vor Ort übernimmt und du nur noch die fachliche Bewertung machst (2–4 Stunden pro Gutachten statt 2–3 Tage), dann sieht die Rechnung so aus:</p>
+
+    <table class="rev-table">
+      <tr><th>Jahr</th><th>Setup</th><th>Jahresumsatz</th></tr>
+      <tr><td>Jahr 1</td><td>Tobi + 1 Assistent ab Monat 4, Kunden-Pipeline live</td><td>500–800K €</td></tr>
+      <tr><td>Jahr 2</td><td>+ 2. Assistent, Abo-Bestand wächst, Technologie unterstützt</td><td>1–1,5M €</td></tr>
+      <tr><td>Jahr 3</td><td>+ 2. Gutachter, ganz Württemberg</td><td>1,5–2,5M €</td></tr>
+    </table>
+
+    <p>Und das ist nur das Gutachten-Geschäft. Die eigentliche Musik steckt im Folgegeschäft:</p>
+
+    <div class="callout">
+      Jedes Gutachten bringt uns direkt zum Eigentümer. Wir kennen seinen Bestand, wissen wo die Schäden sind, haben sein Vertrauen. Und wenn er dann Reinigung braucht, Sanierung, Naturstein-Erweiterung, Umbau, Beratung — wen ruft er an? Uns.<br><br>
+      <strong>Das Gutachten ist der Türöffner. Das Folgegeschäft ist, wo wir richtig verdienen.</strong>
+    </div>
+  </section>
+
+  <!-- ═══ INTERACTIVE GROWTH MODEL ═══ -->
+  <section>
+    <div class="section-rule"></div>
+    <h2>Was passiert, wenn wir <em>wachsen</em></h2>
+    <p class="muted">Bewege die Regler und sieh live, wie Kapazität und Umsatz skalieren — bei 16.000 € pro Gutachten und gesetzlicher Prüfpflicht.</p>
+
+    <div class="growth-box">
+      <h3>Dein Team <span class="hint">Regler bewegen →</span></h3>
+
+      <div class="team-icons" id="teamVis"></div>
+
+      <div class="slider-group">
+        <div class="sl-row">
+          <div class="sl-name">Gutachter</div>
+          <div class="sl-track"><input type="range" id="slG" min="1" max="4" value="1" step="1"></div>
+          <div class="sl-val" id="vG">1</div>
+        </div>
+        <div class="sl-row">
+          <div class="sl-name">Assistenten</div>
+          <div class="sl-track"><input type="range" id="slA" min="0" max="8" value="0" step="1"></div>
+          <div class="sl-val" id="vA">0</div>
+        </div>
+      </div>
+
+      <div class="g-kpi-grid">
+        <div class="g-kpi">
+          <div class="g-kpi-label">Gutachten / Monat</div>
+          <div class="g-kpi-val green" id="kG">5</div>
+          <div class="g-kpi-sub">à 16.000 €</div>
+        </div>
+        <div class="g-kpi">
+          <div class="g-kpi-label">Monatsumsatz</div>
+          <div class="g-kpi-val green" id="kM">80K €</div>
+          <div class="g-kpi-sub">Gutachten</div>
+        </div>
+        <div class="g-kpi">
+          <div class="g-kpi-label">+ Folgegeschäft</div>
+          <div class="g-kpi-val gold" id="kF">40K €</div>
+          <div class="g-kpi-sub">Reinigung, Sanierung</div>
+        </div>
+        <div class="g-kpi">
+          <div class="g-kpi-label">Jahresumsatz</div>
+          <div class="g-kpi-val" id="kJ">1,4M €</div>
+          <div class="g-kpi-sub">Gutachten + Folge</div>
+        </div>
+      </div>
+
+      <div style="font-size:0.72rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--fg-muted);margin-bottom:0.75rem">Jahresumsatz nach Szenario</div>
+      <div class="bars" id="barsC"></div>
+      <div class="bar-legend-o">
+        <span><span class="ldot lg"></span>Gutachten</span>
+        <span><span class="ldot lf"></span>Folgegeschäft</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ TÜRÖFFNER ═══ -->
+  <section>
+    <div class="section-rule"></div>
+    <h2>Der <em>Türöffner-Effekt</em></h2>
+    <p class="muted">Das Gutachten ist nicht das Geschäft — es ist der Einstieg.</p>
+
+    <div class="fw" style="margin-top:1.5rem">
+      <div class="fw-step">
+        <div class="fw-ind"><div class="fw-dot dg">📋</div><div class="fw-line"></div></div>
+        <div class="fw-body">
+          <div class="fw-title">Gesetzliche Prüfpflicht</div>
+          <div class="fw-desc">VDI 6200, Verkehrssicherungspflicht — der Eigentümer muss prüfen lassen. Keine Kaltakquise nötig.</div>
+        </div>
+      </div>
+      <div class="fw-step">
+        <div class="fw-ind"><div class="fw-dot dg">🔍</div><div class="fw-line"></div></div>
+        <div class="fw-body">
+          <div class="fw-title">Gutachten vor Ort</div>
+          <div class="fw-desc">Assistent mit Copilot dokumentiert, vier Augen sehen mehr als zwei. Du bewertest — vor Ort oder remote.</div>
+        </div>
+      </div>
+      <div class="fw-step">
+        <div class="fw-ind"><div class="fw-dot dg">🤝</div><div class="fw-line"></div></div>
+        <div class="fw-body">
+          <div class="fw-title">Vertrauen beim Eigentümer</div>
+          <div class="fw-desc">Du kennst sein Gebäude besser als er selbst. Du bist der zertifizierte Experte, der ihm sagt, was Sache ist.</div>
+        </div>
+      </div>
+      <div class="fw-step">
+        <div class="fw-ind"><div class="fw-dot dy">💰</div><div class="fw-line"></div></div>
+        <div class="fw-body">
+          <div class="fw-title">Folgegeschäft</div>
+          <div class="fw-desc">Reinigung, Sanierung, Naturstein-Erweiterung, Beratung — wen ruft er an? Den, der sein Gebäude kennt.</div>
+        </div>
+      </div>
+      <div class="fw-step">
+        <div class="fw-ind"><div class="fw-dot dy">🔄</div></div>
+        <div class="fw-body">
+          <div class="fw-title">Abo-Vertrag</div>
+          <div class="fw-desc">VDI-6200-Prüfzyklus alle 2–5 Jahre. Der Kunde kommt automatisch wieder — ohne dass wir ihn suchen müssen.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="multi-banner">
+      <div class="multi-num" id="multiN">×1,5</div>
+      <div class="multi-sub">Gesamtumsatz pro Gutachten-Euro durch Folgegeschäft</div>
+    </div>
+  </section>
+
+  <!-- ═══ TRADITION TRIFFT INNOVATION ═══ -->
+  <section>
+    <div class="section-rule"></div>
+    <h2>Tradition trifft <em>Innovation</em></h2>
+
+    <h3>Warum überhaupt Technologie?</h3>
+    <p>Stell dir vor, dein Assistent steht an einer 40 Meter langen Sandsteinfassade. Dritter Stock, Nachmittag, Sonne blendet. Er dokumentiert 200 Fotos, prüft jede Fuge, jeden Riss. Und trotzdem: Irgendwo übersieht er was. Nicht weil er schlecht ist — sondern weil das menschliche Auge nach drei Stunden Detailarbeit nachlässt. Das ist keine Schwäche, das ist Biologie.</p>
+    <p>Jetzt stell dir vor, da läuft ein zweites Paar Augen mit. Eins, das nie müde wird. Eins, das auf tausenden Fassadenfotos trainiert wurde und gelernt hat, wie ein Haarriss im Sandstein aussieht, wie sich Schalenbildung im Frühstadium zeigt, wo Frostabsprengungen typischerweise auftreten. Nicht um deinen Assistenten zu ersetzen — sondern um ihm zu sagen: „Hey, Bereich B3, da links oben, schau nochmal genauer hin."</p>
+    <p><strong>Das ist die Idee: Vier Augen sehen mehr als zwei.</strong></p>
+
+    <h3>Wie funktioniert das konkret?</h3>
+    <p>Ich trainiere eine Bilderkennung — eine Software, die Fotos von Natursteinfassaden analysiert und Schäden automatisch markiert. Das funktioniert im Prinzip wie die Gesichtserkennung in deinem Handy: Das Handy hat aus Millionen Gesichtsfotos gelernt, wie ein Gesicht aussieht. Unser System lernt aus tausenden Fassadenfotos, wie ein Riss aussieht, wie Absandung anfängt, wo Schalenbildung entsteht.</p>
+    <p>Die Grundlage ist wissenschaftlich und funktioniert so: Wir nehmen echte Fassadenfotos — von deinen bisherigen Gutachten, von Objekten die wir neu dokumentieren. Dann markierst du die Schäden darin: „Das hier ist ein Riss, Kategorie 2. Das da ist Absandung, fortgeschritten. Das ist harmlos." Das System lernt aus diesen Bewertungen und wird mit jedem Beispiel besser — wie ein Lehrling, der mit jedem Objekt dazulernt. Nur schneller.</p>
+
+    <div class="callout">
+      <strong>Und genau deshalb bist du der Schlüssel.</strong> Ohne einen zertifizierten Sachverständigen, der dem System beibringt, was richtig und was falsch ist, ist die ganze Technologie wertlos. Irgendwer muss dem Computer zeigen: „Das ist ein kritischer Riss, das ist nur eine Verschmutzung." Dafür braucht man Jahrzehnte Erfahrung mit Naturstein. Deine Erfahrung. Deine Familie macht das in vierter Generation — dieses Wissen gibt es nicht im Internet und nicht in einem Lehrbuch. Es steckt in deinem Kopf. Und ich will es in ein System bringen, das dieses Wissen multipliziert.
+    </div>
+
+    <p>Am Anfang kann das System vielleicht 70% der Schäden selbstständig finden. Aber es wird besser — mit jedem Gutachten, das wir machen, mit jeder Fassade, die wir dokumentieren. Die Bewertung, ob ein Schaden kritisch ist oder nicht, bleibt immer bei dir. Die Unterschrift unter dem Gutachten ist deine. Das System sorgt nur dafür, dass nichts übersehen wird.</p>
+
+    <h3>Die Ausrüstung: Eine Brille und ein Kopfhörer</h3>
+    <p>Klingt futuristisch, ist es aber nicht. Es gibt inzwischen Sonnenbrillen mit eingebauter Kamera — die sehen aus wie eine normale Oakley, nur dass sie Fotos und Videos machen können. Dein Assistent setzt die auf, steckt kabellose Kopfhörer rein, und läuft an der Fassade entlang. Die Kamera filmt, was er sieht. Die Software analysiert das Bild in Echtzeit. Und wenn sie etwas Auffälliges erkennt, sagt sie ihm über den Kopfhörer: „Bereich C2, links oben, nochmal genauer hinschauen — sieht nach Absandung aus."</p>
+    <p>Der Assistent muss kein Experte sein. Er muss nur hingehen, hinschauen und dokumentieren. Das System leitet ihn an wie ein erfahrener Kollege, der neben ihm steht. Und du sitzt zu Hause, schaust dir die Ergebnisse am Bildschirm an und gibst die finale Bewertung. Statt 2–3 Tage vor Ort: ein paar Stunden am Schreibtisch.</p>
+
+    <!-- SETUP DIAGRAM -->
+    <div style="margin:2.5rem 0">
+      <!-- Desktop: horizontal -->
+      <svg class="svg-desktop" viewBox="0 0 680 200" style="width:100%;max-width:680px;display:block;margin:0 auto" aria-label="Copilot-System: Brille, Kopfhörer und KI arbeiten zusammen">
+        <g transform="translate(60,40)">
+          <rect x="0" y="0" width="120" height="120" rx="16" fill="var(--surface-alt)" stroke="var(--border)" stroke-width="1.5"/>
+          <text x="60" y="42" text-anchor="middle" font-size="32">🕶️</text>
+          <text x="60" y="72" text-anchor="middle" font-family="var(--font-body)" font-weight="600" font-size="13" fill="var(--fg)">Smart-Brille</text>
+          <text x="60" y="90" text-anchor="middle" font-family="var(--font-body)" font-size="10.5" fill="var(--fg-muted)">Sieht, was der</text>
+          <text x="60" y="103" text-anchor="middle" font-family="var(--font-body)" font-size="10.5" fill="var(--fg-muted)">Assistent sieht</text>
+        </g>
+        <g><line x1="190" y1="100" x2="250" y2="100" stroke="var(--accent)" stroke-width="2" stroke-dasharray="6,4"/><polygon points="250,95 262,100 250,105" fill="var(--accent)"/></g>
+        <g transform="translate(270,20)">
+          <rect x="0" y="0" width="140" height="160" rx="16" fill="var(--accent-light)" stroke="var(--accent)" stroke-width="2"/>
+          <text x="70" y="42" text-anchor="middle" font-size="32">🧠</text>
+          <text x="70" y="72" text-anchor="middle" font-family="var(--font-body)" font-weight="700" font-size="14" fill="var(--accent)">KI-Erkennung</text>
+          <text x="70" y="92" text-anchor="middle" font-family="var(--font-body)" font-size="10.5" fill="var(--fg-muted)">Analysiert Bilder</text>
+          <text x="70" y="105" text-anchor="middle" font-family="var(--font-body)" font-size="10.5" fill="var(--fg-muted)">in Echtzeit</text>
+          <text x="70" y="125" text-anchor="middle" font-family="var(--font-body)" font-size="10.5" fill="var(--fg-muted)">Markiert Schäden</text>
+          <text x="70" y="145" text-anchor="middle" font-family="var(--font-body)" font-size="10.5" fill="var(--fg-muted)">Dokumentiert alles</text>
+        </g>
+        <g><line x1="420" y1="100" x2="480" y2="100" stroke="var(--accent)" stroke-width="2" stroke-dasharray="6,4"/><polygon points="480,95 492,100 480,105" fill="var(--accent)"/></g>
+        <g transform="translate(500,40)">
+          <rect x="0" y="0" width="120" height="120" rx="16" fill="var(--surface-alt)" stroke="var(--border)" stroke-width="1.5"/>
+          <text x="60" y="42" text-anchor="middle" font-size="32">🎧</text>
+          <text x="60" y="72" text-anchor="middle" font-family="var(--font-body)" font-weight="600" font-size="13" fill="var(--fg)">Kopfhörer</text>
+          <text x="60" y="90" text-anchor="middle" font-family="var(--font-body)" font-size="10.5" fill="var(--fg-muted)">Spricht mit dem</text>
+          <text x="60" y="103" text-anchor="middle" font-family="var(--font-body)" font-size="10.5" fill="var(--fg-muted)">Assistenten</text>
+        </g>
+      </svg>
+      <!-- Mobile: vertical stack -->
+      <svg class="svg-mobile" viewBox="0 0 300 420" style="width:100%;max-width:300px;margin:0 auto" aria-label="Copilot-System: Brille, Kopfhörer und KI">
+        <g transform="translate(90,10)">
+          <rect x="0" y="0" width="120" height="100" rx="14" fill="var(--surface-alt)" stroke="var(--border)" stroke-width="1.5"/>
+          <text x="60" y="36" text-anchor="middle" font-size="28">🕶️</text>
+          <text x="60" y="60" text-anchor="middle" font-family="var(--font-body)" font-weight="600" font-size="13" fill="var(--fg)">Smart-Brille</text>
+          <text x="60" y="78" text-anchor="middle" font-family="var(--font-body)" font-size="11" fill="var(--fg-muted)">Sieht, was er sieht</text>
+        </g>
+        <g><line x1="150" y1="115" x2="150" y2="140" stroke="var(--accent)" stroke-width="2" stroke-dasharray="6,4"/><polygon points="145,140 150,152 155,140" fill="var(--accent)"/></g>
+        <g transform="translate(60,155)">
+          <rect x="0" y="0" width="180" height="120" rx="14" fill="var(--accent-light)" stroke="var(--accent)" stroke-width="2"/>
+          <text x="90" y="36" text-anchor="middle" font-size="28">🧠</text>
+          <text x="90" y="60" text-anchor="middle" font-family="var(--font-body)" font-weight="700" font-size="14" fill="var(--accent)">KI-Erkennung</text>
+          <text x="90" y="80" text-anchor="middle" font-family="var(--font-body)" font-size="11" fill="var(--fg-muted)">Analysiert in Echtzeit</text>
+          <text x="90" y="96" text-anchor="middle" font-family="var(--font-body)" font-size="11" fill="var(--fg-muted)">Markiert & dokumentiert</text>
+        </g>
+        <g><line x1="150" y1="280" x2="150" y2="305" stroke="var(--accent)" stroke-width="2" stroke-dasharray="6,4"/><polygon points="145,305 150,317 155,305" fill="var(--accent)"/></g>
+        <g transform="translate(90,320)">
+          <rect x="0" y="0" width="120" height="100" rx="14" fill="var(--surface-alt)" stroke="var(--border)" stroke-width="1.5"/>
+          <text x="60" y="36" text-anchor="middle" font-size="28">🎧</text>
+          <text x="60" y="60" text-anchor="middle" font-family="var(--font-body)" font-weight="600" font-size="13" fill="var(--fg)">Kopfhörer</text>
+          <text x="60" y="78" text-anchor="middle" font-family="var(--font-body)" font-size="11" fill="var(--fg-muted)">Spricht mit ihm</text>
+        </g>
+      </svg>
+      <p style="text-align:center;margin-top:.75rem;font-size:.85rem;color:var(--fg-muted)">Sieht aus wie eine normale Sonnenbrille + kabellose Kopfhörer. Keine auffällige Technik.</p>
+    </div>
+
+    <h3>Warum wir Quereinsteiger einstellen können</h3>
+    <p>Das ist der Punkt, der das Geschäft skalierbar macht. Normalerweise brauchst du für Fassadeninspektionen ausgebildete Steinmetze oder Bautechniker. Die sind teuer und schwer zu finden — Fachkräftemangel, du kennst das. Aber denk mal drüber nach: Was muss der Assistent eigentlich können?</p>
+    <p>Er muss an eine Fassade gehen, systematisch abfotografieren, und auf Hinweise reagieren. „Hier genauer hinschauen. Davon ein Detailfoto. Das mit dem Maßband messen." Das ist keine Raketenwissenschaft — das kann jeder motivierte Mensch nach zwei Wochen Einarbeitung. Weil das System ihm sagt, worauf er achten muss. Weil dein Fachwissen in der Software steckt, die ihn anleitet.</p>
+    <p>Das heißt: Wir sind nicht vom Fachkräftemarkt abhängig. Wir können schnell wachsen, weil wir Leute einstellen können, die es sonst nicht gibt. Und die Qualität bleibt trotzdem hoch — weil am Ende immer du drüberschaust.</p>
+
+    <div style="margin-top:1.5rem">
+      <div class="inn-item">
+        <strong>Der Assistent ist nie allein — er arbeitet im Team mit der KI.</strong>
+        Das ist der entscheidende Unterschied: Der Assistent steht nicht stumm vor einer Fassade und macht Fotos. Er ist im laufenden Dialog mit dem System. Die KI sagt: „Hier sehe ich etwas — geh mal näher ran." Der Assistent fragt: „Ist das ein Riss oder eine Fuge?" Das System antwortet, schlägt vor, ordnet ein. Die beiden besprechen sich — wie zwei Kollegen vor Ort. Und alles, was sie besprechen, wird automatisch dokumentiert. Jede Beobachtung, jede Rückfrage, jede Einschätzung. Am Ende sitzt du nicht vor einem Stapel Fotos, sondern vor einem strukturierten Inspektionsbericht, den du nur noch fachlich bewerten musst.
+      </div>
+
+      <!-- TEAM WORKFLOW DIAGRAM -->
+      <div style="margin:2rem 0">
+        <svg class="svg-desktop" viewBox="0 0 680 280" style="width:100%;max-width:680px;display:block;margin:0 auto" aria-label="Teamarbeit: Assistent, KI und Tobi arbeiten zusammen">
+          <!-- Assistent -->
+          <g transform="translate(40,80)">
+            <circle cx="55" cy="40" r="50" fill="var(--surface-alt)" stroke="var(--border)" stroke-width="1.5"/>
+            <text x="55" y="30" text-anchor="middle" font-size="28">👷</text>
+            <text x="55" y="52" text-anchor="middle" font-family="var(--font-body)" font-weight="600" font-size="11" fill="var(--fg)">Assistent</text>
+            <text x="55" y="65" text-anchor="middle" font-family="var(--font-body)" font-size="9.5" fill="var(--fg-muted)">vor Ort</text>
+          </g>
+          <!-- Double arrow Assistent <-> KI -->
+          <g>
+            <line x1="150" y1="110" x2="240" y2="110" stroke="var(--accent)" stroke-width="2"/>
+            <polygon points="240,105 252,110 240,115" fill="var(--accent)"/>
+            <line x1="252" y1="130" x2="150" y2="130" stroke="var(--accent)" stroke-width="2"/>
+            <polygon points="150,125 138,130 150,135" fill="var(--accent)"/>
+            <text x="196" y="102" text-anchor="middle" font-family="var(--font-body)" font-size="9" fill="var(--fg-muted)">„Ist das ein Riss?"</text>
+            <text x="196" y="148" text-anchor="middle" font-family="var(--font-body)" font-size="9" fill="var(--fg-muted)">„Geh näher ran"</text>
+          </g>
+          <!-- KI (center, larger) -->
+          <g transform="translate(260,50)">
+            <rect x="0" y="0" width="160" height="140" rx="20" fill="var(--accent-light)" stroke="var(--accent)" stroke-width="2"/>
+            <text x="80" y="40" text-anchor="middle" font-size="28">🧠</text>
+            <text x="80" y="65" text-anchor="middle" font-family="var(--font-body)" font-weight="700" font-size="13" fill="var(--accent)">KI-Copilot</text>
+            <text x="80" y="84" text-anchor="middle" font-family="var(--font-body)" font-size="10" fill="var(--fg-muted)">Erkennt Schäden</text>
+            <text x="80" y="98" text-anchor="middle" font-family="var(--font-body)" font-size="10" fill="var(--fg-muted)">Stellt Rückfragen</text>
+            <text x="80" y="112" text-anchor="middle" font-family="var(--font-body)" font-size="10" fill="var(--fg-muted)">Dokumentiert alles</text>
+          </g>
+          <!-- Arrow KI -> Tobi -->
+          <g>
+            <line x1="430" y1="120" x2="500" y2="120" stroke="var(--gold)" stroke-width="2"/>
+            <polygon points="500,115 512,120 500,125" fill="var(--gold)"/>
+            <text x="466" y="112" text-anchor="middle" font-family="var(--font-body)" font-size="9" fill="var(--fg-muted)">Fertiger Bericht</text>
+          </g>
+          <!-- Tobi -->
+          <g transform="translate(520,80)">
+            <circle cx="55" cy="40" r="50" fill="var(--gold-light)" stroke="var(--gold)" stroke-width="2"/>
+            <text x="55" y="30" text-anchor="middle" font-size="28">👨‍🔬</text>
+            <text x="55" y="52" text-anchor="middle" font-family="var(--font-body)" font-weight="700" font-size="11" fill="var(--gold-dark)">Tobi</text>
+            <text x="55" y="65" text-anchor="middle" font-family="var(--font-body)" font-size="9.5" fill="var(--fg-muted)">bewertet & zeichnet</text>
+          </g>
+          <!-- Bottom: dokumentation bar -->
+          <g transform="translate(40,210)">
+            <rect x="0" y="0" width="600" height="44" rx="10" fill="var(--surface-alt)" stroke="var(--border)" stroke-width="1"/>
+            <text x="300" y="18" text-anchor="middle" font-family="var(--font-body)" font-weight="600" font-size="11" fill="var(--fg)">📄 Automatische Dokumentation</text>
+            <text x="300" y="34" text-anchor="middle" font-family="var(--font-body)" font-size="10" fill="var(--fg-muted)">Jedes Gespräch, jede Beobachtung, jede Bewertung — lückenlos protokolliert</text>
+          </g>
+          <!-- Dashed lines down to doc bar -->
+          <line x1="95" y1="170" x2="95" y2="210" stroke="var(--border)" stroke-width="1" stroke-dasharray="4,3"/>
+          <line x1="340" y1="190" x2="340" y2="210" stroke="var(--border)" stroke-width="1" stroke-dasharray="4,3"/>
+          <line x1="575" y1="170" x2="575" y2="210" stroke="var(--border)" stroke-width="1" stroke-dasharray="4,3"/>
+        </svg>
+        <!-- Mobile: vertical team workflow -->
+        <svg class="svg-mobile" viewBox="0 0 300 520" style="width:100%;max-width:300px;margin:0 auto" aria-label="Teamarbeit: Assistent, KI und Tobi">
+          <g transform="translate(90,10)">
+            <circle cx="60" cy="40" r="45" fill="var(--surface-alt)" stroke="var(--border)" stroke-width="1.5"/>
+            <text x="60" y="32" text-anchor="middle" font-size="26">👷</text>
+            <text x="60" y="52" text-anchor="middle" font-family="var(--font-body)" font-weight="600" font-size="12" fill="var(--fg)">Assistent</text>
+            <text x="60" y="66" text-anchor="middle" font-family="var(--font-body)" font-size="10" fill="var(--fg-muted)">vor Ort</text>
+          </g>
+          <!-- Arrows with labels -->
+          <g>
+            <line x1="130" y1="100" x2="130" y2="130" stroke="var(--accent)" stroke-width="2"/><polygon points="125,130 130,142 135,130" fill="var(--accent)"/>
+            <line x1="170" y1="142" x2="170" y2="100" stroke="var(--accent)" stroke-width="2"/><polygon points="165,100 170,88 175,100" fill="var(--accent)"/>
+            <text x="108" y="122" text-anchor="middle" font-family="var(--font-body)" font-size="9" fill="var(--fg-muted)" transform="rotate(-90,108,122)">„Ein Riss?"</text>
+            <text x="192" y="122" text-anchor="middle" font-family="var(--font-body)" font-size="9" fill="var(--fg-muted)" transform="rotate(-90,192,122)">„Näher ran"</text>
+          </g>
+          <g transform="translate(60,145)">
+            <rect x="0" y="0" width="180" height="110" rx="16" fill="var(--accent-light)" stroke="var(--accent)" stroke-width="2"/>
+            <text x="90" y="34" text-anchor="middle" font-size="26">🧠</text>
+            <text x="90" y="56" text-anchor="middle" font-family="var(--font-body)" font-weight="700" font-size="13" fill="var(--accent)">KI-Copilot</text>
+            <text x="90" y="76" text-anchor="middle" font-family="var(--font-body)" font-size="11" fill="var(--fg-muted)">Erkennt & fragt nach</text>
+            <text x="90" y="92" text-anchor="middle" font-family="var(--font-body)" font-size="11" fill="var(--fg-muted)">Dokumentiert alles</text>
+          </g>
+          <g><line x1="150" y1="260" x2="150" y2="290" stroke="var(--gold)" stroke-width="2"/><polygon points="145,290 150,302 155,290" fill="var(--gold)"/><text x="150" y="283" text-anchor="middle" font-family="var(--font-body)" font-size="10" fill="var(--fg-muted)">Fertiger Bericht</text></g>
+          <g transform="translate(90,305)">
+            <circle cx="60" cy="40" r="45" fill="var(--gold-light)" stroke="var(--gold)" stroke-width="2"/>
+            <text x="60" y="32" text-anchor="middle" font-size="26">👨‍🔬</text>
+            <text x="60" y="52" text-anchor="middle" font-family="var(--font-body)" font-weight="700" font-size="12" fill="var(--gold-dark)">Tobi</text>
+            <text x="60" y="66" text-anchor="middle" font-family="var(--font-body)" font-size="10" fill="var(--fg-muted)">bewertet & zeichnet</text>
+          </g>
+          <g transform="translate(20,420)">
+            <rect x="0" y="0" width="260" height="44" rx="10" fill="var(--surface-alt)" stroke="var(--border)" stroke-width="1"/>
+            <text x="130" y="18" text-anchor="middle" font-family="var(--font-body)" font-weight="600" font-size="11" fill="var(--fg)">📄 Auto-Dokumentation</text>
+            <text x="130" y="34" text-anchor="middle" font-family="var(--font-body)" font-size="9.5" fill="var(--fg-muted)">Alles lückenlos protokolliert</text>
+          </g>
+          <line x1="150" y1="390" x2="150" y2="420" stroke="var(--border)" stroke-width="1" stroke-dasharray="4,3"/>
+        </svg>
+      </div>
+
+      <div class="inn-item">
+        <strong>Alles dokumentiert, alles nachweisbar.</strong>
+        Jeder Schritt wird automatisch festgehalten — was wurde wann wo inspiziert, welche Schäden erkannt, welche Fotos gemacht, welche Rückfragen gestellt. Das ist Qualitätsnachweis und Absicherung in einem. Wenn ein Eigentümer reklamiert oder ein Haftungsfall kommt: Wir haben lückenlose Dokumentation. Kein „Aussage gegen Aussage", sondern Beweise.
+      </div>
+      <div class="inn-item">
+        <strong>Das System wird mit jedem Einsatz schlauer.</strong>
+        Jede Fassade, die wir dokumentieren, macht die Erkennung präziser. Und wir sind nicht auf bezahlte Aufträge angewiesen, um Trainingsdaten zu sammeln: Jeder Assistent, der an einem Denkmal vorbeiläuft, an einem Friedhof, an einer historischen Fassade — kurz Fotos machen, fertig. Das System lernt ständig dazu, ohne dass es uns einen Cent kostet.
+      </div>
+      <div class="inn-item">
+        <strong>Niemand in Deutschland kann das kopieren.</strong>
+        Es gibt keinen Anbieter, der eine trainierte Bilderkennung für Natursteinschäden mit einem zertifizierten Sachverständigen kombiniert. Die Tech-Leute haben keine Fachleute, die Gutachter haben keine Technologie. Wir haben beides. Und je länger wir am Markt sind, desto mehr Trainingsdaten, desto präziser das System, desto größer der Vorsprung.
+      </div>
+    </div>
+
+    <div class="callout">
+      <strong>Alleine ist jeder von uns gut. Zusammen sind wir unschlagbar.</strong> Du hast das Fachwissen aus vier Generationen, die Zertifizierung, das Auge für Stein. Ich habe die Technologie, die Akquise, die Skalierung. Das eine ohne das andere ist nur die halbe Geschichte — aber zusammen entsteht etwas, das niemand in Deutschland kopieren kann.
+    </div>
+  </section>
+
+  <!-- ═══ WAS ICH REINBRINGE ═══ -->
+  <section>
+    <div class="section-rule"></div>
+    <h2>Was ich <em>reinbringe</em></h2>
+    <p>Du konzentrierst dich auf das, was nur du kannst: Stein bewerten, Gutachten schreiben, unterschreiben. Alles andere übernehme ich.</p>
+
+    <table class="rev-table">
+      <tr><th>Bereich</th><th>Was ich liefere</th><th>Warum das zählt</th></tr>
+      <tr><td>Akquise & Leads</td><td>Daten-Pipeline aus Denkmalschutzlisten, Gebäudealter, Katasterdaten, Street-View-Screening — du bekommst eine priorisierte Liste mit Objekten, die wahrscheinlich Schäden haben</td><td>Keine Kaltakquise mehr</td></tr>
+      <tr><td>Digitalisierung</td><td>Plattform für Gebäude-Datenbank, automatisierte Berichtsvorlagen, digitale Gutachten-Workflows</td><td>Halbe Schreibtischzeit</td></tr>
+      <tr><td>Eigentümer-ID</td><td>Grundbuch-Abfragen, Hausverwaltungs-Netzwerk, Immobilienportal-Monitoring</td><td>Wir finden sie, bevor sie uns suchen</td></tr>
+      <tr><td>Geschäftsaufbau</td><td>GmbH-Gründung, Buchhaltung, Verträge, Versicherung, Website, Marketing</td><td>Du unterschreibst Gutachten, nicht Papierkram</td></tr>
+      <tr><td>Skalierung</td><td>Assistenten einstellen und einarbeiten, Subunternehmer-Netzwerk, neue Regionen</td><td>Du bleibst Senior, das Team wächst um dich</td></tr>
+      <tr><td>KI-Inspektion</td><td>Copilot-System: Brille + Kopfhörer, KI erkennt Schäden in Echtzeit. Du reviewst remote. Technik ist mein Investment, du nutzt sie kostenlos</td><td>Quereinsteiger als Assistenten möglich — kein Fachkräftemangel</td></tr>
+    </table>
+  </section>
+
+  <!-- ═══ DEINE ROLLE ═══ -->
+  <section>
+    <div class="section-rule"></div>
+    <h2>Deine Rolle — minimal belastet, <em>maximal Ertrag</em></h2>
+    <p>Heute machst du alles selbst. Mit der Partnerschaft ändert sich, was du <strong>nicht</strong> mehr machst:</p>
+
+    <table class="compare-table">
+      <tr><th>Heute (Solo)</th><th>Morgen (Partnerschaft)</th></tr>
+      <tr><td>Kunden suchen, anrufen, anschreiben</td><td>Leads kommen vorqualifiziert aus der Pipeline</td></tr>
+      <tr><td>Angebote schreiben, nachfassen</td><td>Thomas übernimmt Angebote und Verhandlung</td></tr>
+      <tr><td>Alleine vor Ort: Fotos, Messungen, Drohne, Bewertung</td><td>Assistent dokumentiert, du bewertest nur noch</td></tr>
+      <tr><td>Gutachten am Schreibtisch tippen</td><td>Vorlage aus der Plattform, du ergänzt die Bewertung</td></tr>
+      <tr><td>Rechnung schreiben, Buchhaltung, Mahnungen</td><td>GmbH mit Buchhaltung erledigt das</td></tr>
+      <tr><td>4–5 Gutachten/Monat, alles selbst</td><td>8–15 Gutachten/Monat, du machst nur den Expertenteil</td></tr>
+    </table>
+
+    <p>Konkret: Dein Zeitaufwand pro Gutachten sinkt von 2–3 Tagen auf 2–4 Stunden. Dein Ertrag pro Stunde steigt massiv, weil du die teuerste Ressource bist und nicht mehr mit 25-€/h-Arbeit blockiert wirst.</p>
+  </section>
+
+  <!-- ═══ ROADMAP ═══ -->
+  <section>
+    <div class="section-rule"></div>
+    <h2>Die <em>Roadmap</em></h2>
+
+    <p class="muted">Kein Risiko, kein großes Investment am Anfang. Wir bootstrappen — die ersten Aufträge finanzieren den nächsten Schritt.</p>
+
+    <div class="rm-phase">
+      <h4>Phase 0: Website & Startschuss (Monat 1–2)</h4>
+      <ul>
+        <li><strong>Website zuerst:</strong> Professionelle Präsenz als Naturstein-Sachverständiger — das ist unser Aushängeschild, bevor der erste Kunde kommt</li>
+        <li><strong>Marketing:</strong> LinkedIn-Profil, erste Social-Media-Kampagnen, Ratgeber für Natursteinhausbesitzer — kostenloser Mehrwert, der Vertrauen aufbaut und Kunden bringt</li>
+        <li><strong>Parallel: KI-Entwicklung startet sofort.</strong> Ich baue das Erkennungssystem auf — das ist mein Investment und mein Job ab Tag 1. Tobi markiert Schäden in Fotos, das System lernt. Nebenbei dokumentieren wir Fassaden bei Treulieb-Baustellen, auf Friedhöfen, an historischen Gebäuden — alles ist Trainingsmaterial</li>
+        <li>Ich baue parallel die Kunden-Pipeline auf: Denkmalschutzliste Stuttgart, Gebäuderegister, erste 50 Objekte identifizieren</li>
+      </ul>
+      <div class="rm-target">→ Website live, KI-Training läuft, Pipeline füllt sich</div>
+    </div>
+
+    <div class="rm-phase">
+      <h4>Phase 1: Erste Kunden & GmbH (Monat 2–4)</h4>
+      <ul>
+        <li>Erste Kunden reinholen — ohne GmbH, ohne Overhead. Du machst 2–3 Gutachten über unsere Leads, wir teilen den Umsatz</li>
+        <li>Wir testen, ob die Zusammenarbeit funktioniert — bevor wir einen Euro in Strukturen stecken</li>
+        <li><strong>Vom ersten Geld gründen wir die GmbH.</strong> Geschäftskonto, Versicherung, Verträge — ich übernehme den Papierkram</li>
+        <li>Erste Hausverwaltungen als Partner ansprechen (wiederkehrende Prüfaufträge)</li>
+        <li><strong>KI:</strong> Jeder Kundenauftrag liefert neue Trainingsdaten — Tobi's Bewertungen sind der Goldstandard, von dem das System lernt</li>
+      </ul>
+      <div class="rm-target">→ 2–3 Gutachten, 32–48K € Umsatz, GmbH gegründet</div>
+    </div>
+
+    <div class="rm-phase">
+      <h4>Phase 2: Erster Assistent (Monat 6–8)</h4>
+      <ul>
+        <li>Vom Umsatz der ersten Monate finanzieren wir den ersten Assistenten</li>
+        <li>Tobi bildet ihn ein, zeigt ihm die Basics vor Ort</li>
+        <li><strong>KI:</strong> Monate an Training zahlen sich aus — das System erkennt jetzt die Hauptschadensbilder (Risse, Absandung, Schalenbildung). Brille + Kopfhörer im Einsatz, der Assistent bekommt Echtzeit-Hinweise</li>
+        <li><strong>KI:</strong> Jede Inspektion liefert weiter neue Trainingsdaten — das System wird mit jedem Auftrag präziser</li>
+        <li>Tobi kann sich auf Bewertung und Unterschrift konzentrieren</li>
+      </ul>
+      <div class="rm-target">→ 8–10 Gutachten/Monat, 130–160K € Monatsumsatz</div>
+    </div>
+
+    <div class="rm-phase">
+      <h4>Phase 3: Skalierung & Marktführerschaft (Monat 8–12)</h4>
+      <ul>
+        <li>Zweiter Assistent — finanziert aus dem laufenden Geschäft</li>
+        <li>Abo-Verträge für VDI-6200-Prüfzyklen: planbare, wiederkehrende Einnahmen</li>
+        <li>Gebiet auf Großraum Stuttgart ausweiten</li>
+        <li>Drohne für hohe Fassaden</li>
+        <li><strong>KI:</strong> System ausgereift — erkennt auch feinere Schäden (Frostabsprengungen, Verfärbungen, Fugenversagen). Assistenten arbeiten weitgehend selbstständig</li>
+        <li><strong>Marketing:</strong> Volle Content-Offensive — Social Media, LinkedIn-Kampagnen, Ratgeber-Serien für Hauseigentümer. Die drei anderen Anbieter machen null Marketing. Wir dominieren jede Google-Suche, jeden LinkedIn-Feed, jede Eigentümer-Frage zum Thema Naturstein in Baden-Württemberg</li>
+      </ul>
+      <div class="rm-target">→ 12–15 Gutachten/Monat, 200–240K € Monatsumsatz — Marktführer Baden-Württemberg</div>
+    </div>
+
+    <div class="rm-phase">
+      <h4>Phase 4: Ausbau & Lizenzierung (Jahr 2–3)</h4>
+      <ul>
+        <li>Zweiter Gutachter als Partner/Subunternehmer</li>
+        <li>Ganz Württemberg: Heilbronn, Ulm, Tübingen, Schwäbisch Hall</li>
+        <li>Abo-Bestand von 100+ Objekten mit planbarem Jahresumsatz</li>
+        <li><strong>Marketing:</strong> Bekannter Name in der Branche — Ratgeber-Reihe, Vorträge, Referenzen. Eigentümer kommen zu uns, nicht umgekehrt</li>
+        <li><strong>KI:</strong> Technologie reif für Lizenzierung an andere Gutachter-Büros — zweite Einnahmequelle</li>
+      </ul>
+      <div class="rm-target">→ 1,5–2,5M € Jahresumsatz, zweiter Gutachter an Bord</div>
+    </div>
+  </section>
+
+  <!-- ═══ TREULIEB ═══ -->
+  <section>
+    <div class="section-rule"></div>
+    <h2>Dein Familienbetrieb bleibt <em>dein Familienbetrieb</em></h2>
+    <p>Das Treulieb-Geschäft — die Reinigung, die Sanierung, die Natursteinarbeiten, das was dein Vater aufgebaut hat und du in vierter Generation weiterführst — da mische ich mich nicht ein. Das ist deins und bleibt deins. Ich bin dort nicht beteiligt, nicht involviert, nicht Gesellschafter.</p>
+    <p>Aber: Es wird unser bester Vertriebskanal. Und zwar in beide Richtungen:</p>
+
+    <div style="margin-top:1rem">
+      <div class="inn-item">
+        <strong>Gutachten → Treulieb-Aufträge.</strong>
+        Jedes Gutachten, das wir schreiben, empfiehlt konkrete Maßnahmen: Reinigung nötig, Fuge sanieren, Fassadenabschnitt austauschen. Wem gibt der Eigentümer den Auftrag? Dem Betrieb, dessen Sachverständiger gerade das Gebäude geprüft hat und genau weiß, was zu tun ist. Das Gutachten ist der beste Sales-Funnel, den Treulieb je hatte — ohne Akquise, ohne Kaltanruf.
+      </div>
+      <div class="inn-item">
+        <strong>Treulieb-Kunden → Gutachten-Aufträge.</strong>
+        Umgekehrt: Jeder Gebäudebesitzer, für den Treulieb schon arbeitet, braucht irgendwann eine Prüfung nach VDI 6200. Du kennst ihn, er vertraut dir. Das sind warme Leads, die direkt in die GmbH fließen.
+      </div>
+    </div>
+
+    <div class="callout">
+      <strong>Kurz gesagt:</strong> Treulieb und die Gutachter-GmbH sind zwei getrennte Unternehmen, aber sie machen sich gegenseitig stark. Die GmbH liefert Treulieb Kunden, Treulieb liefert der GmbH Kunden. Ein Kreislauf, von dem beide profitieren — und du verdienst auf beiden Seiten.
+    </div>
+  </section>
+
+  <!-- ═══ GMBH ═══ -->
+  <section>
+    <div class="section-rule"></div>
+    <h2>GmbH-<em>Struktur</em></h2>
+    <p>Vorschlag für eine saubere Trennung:</p>
+
+    <table class="gmbh-table">
+      <tr><th></th><th>Tobi</th><th>Thomas</th></tr>
+      <tr><td>Titel</td><td>Geschäftsf. Gesellschafter, Techn. Leiter</td><td>Geschäftsf. Gesellschafter, Business Dev.</td></tr>
+      <tr><td>Verantwortung</td><td>Gutachten, Qualität, Fachaufsicht, BIV-Zertifizierung</td><td>Akquise, Digitalisierung, Finanzen, Skalierung</td></tr>
+      <tr><td>Tagesgeschäft</td><td>Bewertung & Unterschrift (2–4h pro Gutachten)</td><td>Alles andere</td></tr>
+      <tr><td>Investition</td><td>Know-how, Zertifizierung, Reputation</td><td>Kapital, Technologie, Zeit</td></tr>
+    </table>
+
+    <p>Die genaue Anteilsverteilung besprechen wir, wenn du grundsätzlich dabei bist. Dein Familienunternehmen bleibt komplett unangetastet — die GmbH ist das Wachstumsvehikel für die neuen Gutachten-Aufträge, die du alleine nicht bedienen könntest. Und gleichzeitig wird sie zum Turbo für Treulieb.</p>
+  </section>
+
+  <!-- ═══ CTA ═══ -->
+  <section class="cta-section">
+    <div class="section-rule" style="margin-left:auto;margin-right:auto"></div>
+    <h2>Nächster <em>Schritt</em></h2>
+    <p>Ich brauche von dir nur eins: ein Ja, dass wir das zusammen durchrechnen und die GmbH-Gründung konkret planen. Kein Risiko an diesem Punkt — nur ein Gespräch, bei dem wir die Zahlen auf den Tisch legen.</p>
+    <p>Was du nicht brauchst: mehr arbeiten.<br>Was du bekommst: mehr verdienen, ein echtes Unternehmen statt Einzelkämpfertum, und einen Partner, der die Hälfte übernimmt, die du nicht machen willst.</p>
+    <p class="cta-quote">Die einzige Bremse ist die <strong>Kapazität</strong> — nicht die Nachfrage.<br>Und Kapazität können wir skalieren.</p>
+  </section>
+
+</div>
+
+<script>
+(function() {
+  const slG = document.getElementById('slG');
+  const slA = document.getElementById('slA');
+  const vG = document.getElementById('vG');
+  const vA = document.getElementById('vA');
+  const PREIS = 16000;
+  const FOLGE = 0.5;
+
+  function calc(g, a) {
+    const SOLO = 5, ASS = 4.5, CAP = 15;
+    let n;
+    if (a === 0) { n = g * SOLO; }
+    else {
+      const perG = Math.min(SOLO + (a / g) * ASS, CAP);
+      n = g * perG;
+    }
+    n = Math.round(n);
+    const mG = n * PREIS;
+    const mF = mG * FOLGE;
+    return { n, mG, mF, mT: mG + mF, yT: (mG + mF) * 12 };
+  }
+
+  function fK(v) {
+    if (v >= 1e6) return (v / 1e6).toFixed(1).replace('.', ',') + 'M €';
+    return Math.round(v / 1000) + 'K €';
+  }
+
+  function renderTeam(g, a) {
+    const c = document.getElementById('teamVis');
+    let h = '';
+    for (let i = 0; i < g; i++) h += '<div class="ti sv">👨‍🔬<span>SV</span></div>';
+    for (let i = 0; i < a; i++) h += '<div class="ti as">👷<span>Ass.</span></div>';
+    const t = g + a;
+    if (t < 6) for (let i = 0; i < Math.min(2, 6 - t); i++) h += '<div class="ti ghost">+<span></span></div>';
+    c.innerHTML = h;
+  }
+
+  function renderBars(g, a) {
+    const sc = [
+      { l: 'Start', g: 1, a: 0 },
+      { l: '+1 Ass.', g: 1, a: 1 },
+      { l: '+2 Ass.', g: 1, a: 2 },
+      { l: '2. SV', g: 2, a: 3 },
+      { l: 'Voll', g: 2, a: 6 },
+    ];
+    const mx = calc(2, 6).yT;
+    const c = document.getElementById('barsC');
+    let h = '';
+    sc.forEach(s => {
+      const d = calc(s.g, s.a);
+      const yG = d.n * PREIS * 12;
+      const yF = yG * FOLGE;
+      const pG = (yG / mx) * 100;
+      const pF = (yF / mx) * 100;
+      const cur = s.g === g && s.a === a;
+      h += '<div class="bar-row" style="opacity:' + (cur ? '1' : '0.5') + '">' +
+        '<div class="bar-lbl">' + s.l + '<br><span style="font-size:0.6rem;color:var(--fg-light)">' + s.g + 'G+' + s.a + 'A</span></div>' +
+        '<div class="bar-track-o"><div class="bar-fill-o bf-g" style="width:' + (pG + pF) + '%;position:relative">' +
+        '<div class="bar-fill-o bf-f" style="width:' + ((pF / (pG + pF)) * 100) + '%;position:absolute;right:0;top:0;border-radius:0 4px 4px 0"></div>' +
+        '<span class="bar-amt">' + fK(yG + yF) + '</span></div></div></div>';
+    });
+    c.innerHTML = h;
+  }
+
+  function update() {
+    const g = +slG.value, a = +slA.value;
+    vG.textContent = g;
+    vA.textContent = a;
+    const d = calc(g, a);
+    document.getElementById('kG').textContent = d.n;
+    document.getElementById('kM').textContent = fK(d.mG);
+    document.getElementById('kF').textContent = fK(d.mF);
+    document.getElementById('kJ').textContent = fK(d.yT);
+    const multi = ((d.mG + d.mF) / d.mG).toFixed(1).replace('.', ',');
+    document.getElementById('multiN').textContent = '×' + multi;
+    renderTeam(g, a);
+    renderBars(g, a);
+  }
+
+  slG.addEventListener('input', update);
+  slA.addEventListener('input', update);
+  update();
+})();
+</script>
